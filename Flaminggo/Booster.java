@@ -15,7 +15,7 @@ public class Booster extends Actor
     public void act() 
     {
          GreenfootImage myImage = getImage();
-        myImage.scale(150,150);// Add your action code here.
+        myImage.scale(75,75);// Add your action code here.
       
         setLocation(getX(),getY()+2);
         

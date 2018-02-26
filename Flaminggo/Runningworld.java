@@ -8,21 +8,22 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Runningworld extends World
 {
+    public static GreenfootSound myMusic = new GreenfootSound("Kinesis Extended.mp3");
 
-    //GreenfootSound myMusic = new GreenfootSound("Kinesis Extended.mp3");
     /**
      * Constructor for objects of class Runningworld.
      * 
      */
     public Runningworld()
     {    
+        
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(956, 551, 1,false);
 
         Flamin flami = new Flamin();
 
         addObject(flami, 500, 420);
-
+        //GreenfootSound myMusic = new GreenfootSound("Kinesis Extended.mp3");
         /*Sword[]swo = new Sword[5];
         for(int i = 0;i<swo.length;i++){
         swo[i] = new Sword();
@@ -47,11 +48,13 @@ public class Runningworld extends World
         Score sco = new Score();
         addObject(sco, 100,525);
         Score.score = 0;
-
+        
+        myMusic.play();
+        myMusic.setVolume(0);
     }
 
     public void act(){
-
+        myMusic.setVolume(60);
         if(Greenfoot.getRandomNumber(5000)<10){
             addObject(new Pinkbean(),Greenfoot.getRandomNumber(956),0);
         }

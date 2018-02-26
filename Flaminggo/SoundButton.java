@@ -27,12 +27,15 @@ public class SoundButton extends Actor
             if(Greenfoot.mouseClicked(this)){
                 x=1;
                 StartScreen.myMusic.stop();
+                Runningworld.myMusic.stop();
+  
             }
         }
         else{
             if(Greenfoot.mouseClicked(this)){
                 x=0;
                 StartScreen.myMusic.play();
+                Runningworld.myMusic.play();
             }
         }
     } 

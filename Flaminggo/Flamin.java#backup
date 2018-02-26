@@ -78,7 +78,7 @@ public class Flamin extends Actor
             
             //Greenfoot.stop();
             StartScreen.myMusic.stop();
-            Runningworld.myMusic.stop();
+            R
         }
     }
 

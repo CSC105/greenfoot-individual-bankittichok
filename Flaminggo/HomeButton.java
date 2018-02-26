@@ -17,7 +17,8 @@ public class HomeButton  extends Actor
     {
         if(Greenfoot.mouseClicked(this)){
             Greenfoot.setWorld(new StartScreen());
-
+            Runningworld.myMusic.stop();
+            StartScreen.myMusic.stop();
         }    
     }
 }

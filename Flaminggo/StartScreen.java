@@ -43,12 +43,15 @@ public class StartScreen extends World
 
         if(Greenfoot.isKeyDown("enter")){
             Greenfoot.setWorld(new Runningworld());
+            StartScreen.myMusic.stop();
         }
 
         if (Greenfoot.mouseClicked(this))
         {
             Greenfoot.setWorld(new StartScreen());
+            StartScreen.myMusic.stop();
         }
+        
 
     }
 }
