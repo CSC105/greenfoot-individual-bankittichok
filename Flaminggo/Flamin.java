@@ -60,9 +60,12 @@ public class Flamin extends Actor
         else{setImage(leftImage[img]);}
         checkWalk();
         //if(direction == 1){setImage(myImage[img]);}
+        
         //else{myImage[img].mirrorHorizontally());}
+        if(Score.score == 10){
+        
+        }
         gain();
-
         death();
     }
 

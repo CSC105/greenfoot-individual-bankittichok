@@ -21,7 +21,7 @@ public class Runningworld extends World
         super(956, 551, 1,false);
 
         Flamin flami = new Flamin();
-
+        
         addObject(flami, 500, 420);
         //GreenfootSound myMusic = new GreenfootSound("Kinesis Extended.mp3");
         /*Sword[]swo = new Sword[5];
@@ -49,12 +49,13 @@ public class Runningworld extends World
         addObject(sco, 100,525);
         Score.score = 0;
         
+        
         myMusic.play();
         myMusic.setVolume(0);
-    }
-
+        
+}
     public void act(){
-        myMusic.setVolume(60);
+        myMusic.setVolume(40);
         if(Greenfoot.getRandomNumber(5000)<10){
             addObject(new Pinkbean(),Greenfoot.getRandomNumber(956),0);
         }
@@ -68,5 +69,11 @@ public class Runningworld extends World
         if(Greenfoot.getRandomNumber(4000)<10){
             addObject(new Booster(),Greenfoot.getRandomNumber(956),0);
         }
-    }
+        if(Score.score == 1000000){
+            Reward rev = new Reward();
+            
+            addObject(rev, 473,250);
+            
+        }
+   }
 }
