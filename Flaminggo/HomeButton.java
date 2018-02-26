@@ -7,14 +7,17 @@ import greenfoot.*;
  */
 public class HomeButton  extends Actor
 {
-     public HomeButton(){
-    GreenfootImage myImage = getImage();
+
+    public HomeButton(){
+        GreenfootImage myImage = getImage();
         myImage.scale(50,50);
-}
+    }
+
     public void act() 
     {
         if(Greenfoot.mouseClicked(this)){
-        Greenfoot.setWorld(new StartScreen());
-    }    
-}
+            Greenfoot.setWorld(new StartScreen());
+
+        }    
+    }
 }

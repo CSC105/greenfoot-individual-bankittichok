@@ -15,10 +15,10 @@ public class Score extends Actor
    
     public static int score= 0;
     public Score(){
-       setImage(new GreenfootImage("0" , 20, Color.YELLOW, Color.BLACK));
+       setImage(new GreenfootImage("" , 50, Color.BLUE, Color.RED));
     }
     public void act() 
     {
-       setImage(new GreenfootImage(""+Score.score , 20, Color.YELLOW, Color.BLACK));
+       setImage(new GreenfootImage("Score: "+Score.score , 50, Color.YELLOW, Color.BLACK));
     }    
 }
