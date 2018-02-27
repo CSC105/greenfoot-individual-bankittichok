@@ -15,9 +15,9 @@ public class Start extends Actor
     public void act() 
     {
         if(Greenfoot.mouseClicked(this)){
-        Greenfoot.playSound("game start.wav");
-        Greenfoot.setWorld(new Runningworld());
-        StartScreen.myMusic.stop();// Add your action code here.
-    }    
+            Greenfoot.playSound("game start.wav");
+            Greenfoot.setWorld(new Runningworld());
+            StartScreen.myMusic.stop();// Add your action code here.
+        }    
     }    
 }

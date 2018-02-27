@@ -14,11 +14,11 @@ public class Slime extends Actor
      */
     public void act() 
     {
-          GreenfootImage myImage = getImage();
+        GreenfootImage myImage = getImage();
         myImage.scale(75,71);// Add your action code here.
-      
+
         setLocation(getX(),getY()+3);
-        
+
     } 
-    
+
 }

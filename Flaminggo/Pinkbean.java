@@ -14,10 +14,10 @@ public class Pinkbean extends Actor
      */
     public void act() 
     {
-        
+
         GreenfootImage myImage = getImage();
         myImage.scale(148,147);// Add your action code here.
-        
+
         setLocation(getX(),getY()+1);
     }    
 }

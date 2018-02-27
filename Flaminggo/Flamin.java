@@ -60,7 +60,7 @@ public class Flamin extends Actor
         else{setImage(leftImage[img]);}
         checkWalk();
         //if(direction == 1){setImage(myImage[img]);}
-        
+
         //else{myImage[img].mirrorHorizontally());}
         gain();
         death();
@@ -75,7 +75,7 @@ public class Flamin extends Actor
             myWorld.addObject(gameover, 400,250);
             Greenfoot.playSound("gameover.wav");
             myWorld.removeObject(this);
-            
+
             //Greenfoot.stop();
             StartScreen.myMusic.stop();
             Runningworld.myMusic.stop();
@@ -115,10 +115,10 @@ public class Flamin extends Actor
                 setLocation(getX()+100,getY());
             } 
             Myworld.removeObject(Booster);
-            
+
             Score.score--;
         }
-        
+
     }
 
     public boolean atLeftWorldEdge() {

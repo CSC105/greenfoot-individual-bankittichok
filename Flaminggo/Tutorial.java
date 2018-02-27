@@ -17,16 +17,15 @@ public class Tutorial extends Actor
         GreenfootImage myImage = getImage();
         myImage.scale(250,178);
     }
-    
+
     public void act() 
     { 
-       if(Greenfoot.mouseClicked(this)){
-        Greenfoot.playSound("woodcrack.wav");
-        World myWorld = getWorld();
-        Tutorialtwo two = new Tutorialtwo();
-        myWorld.addObject(two, 500,300);
-    }  // Add your action code here.
-    
-    
+        if(Greenfoot.mouseClicked(this)){
+            Greenfoot.playSound("woodcrack.wav");
+            World myWorld = getWorld();
+            Tutorialtwo two = new Tutorialtwo();
+            myWorld.addObject(two, 500,300);
+        }  // Add your action code here.
+
     }    
 }

@@ -8,13 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Maple extends Actor
 {
-       public Maple()
+    public Maple()
     {
         GreenfootImage myImage = getImage();
         int myNewHeight = myImage.getHeight()/2;
         int myNewWidth = (int)myImage.getWidth()/2;
         myImage.scale(135, 150);
     }
+
     /**
      * Act - do whatever the Maple wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

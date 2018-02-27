@@ -40,7 +40,6 @@ public class StartScreen extends World
 
         myMusic.setVolume(60);
         myMusic.playLoop();
-        
 
         if(Greenfoot.isKeyDown("enter")){
             Greenfoot.playSound("game start.wav");
@@ -54,7 +53,6 @@ public class StartScreen extends World
             Greenfoot.setWorld(new StartScreen());
             StartScreen.myMusic.stop();
         }
-        
 
     }
 }
