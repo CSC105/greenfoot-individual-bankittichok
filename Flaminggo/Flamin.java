@@ -30,8 +30,8 @@ public class Flamin extends Actor
         for(int i=0 ; i<36 ; i++){
             rightImage[i] = new GreenfootImage("Flamingo/Flamingo"+(i+1)+".png");
             leftImage[i] = new GreenfootImage("Flamingo/Flamingo"+(i+1)+".png");
-            leftImage[i].scale(150,150);
-            rightImage[i].scale(150,150);
+            leftImage[i].scale(100,163);
+            rightImage[i].scale(100,163);
             leftImage[i].mirrorHorizontally();
         }
         setImage(rightImage[0]);
@@ -41,14 +41,14 @@ public class Flamin extends Actor
 
         if (Greenfoot.isKeyDown("Right"))
         {
-            setLocation(getX()+5,getY());
+            setLocation(getX()+8,getY());
             img += 1;
             direction = 1;
             //setImage(rightImage);
         }
         if (Greenfoot.isKeyDown("Left"))
         { 
-            setLocation(getX()-5,getY());
+            setLocation(getX()-8,getY());
             img += 1;
             direction = -1;
             //setImage(leftImage);
@@ -62,9 +62,6 @@ public class Flamin extends Actor
         //if(direction == 1){setImage(myImage[img]);}
         
         //else{myImage[img].mirrorHorizontally());}
-        if(Score.score == 10){
-        
-        }
         gain();
         death();
     }
@@ -76,7 +73,7 @@ public class Flamin extends Actor
             World myWorld = getWorld();
             GameOver gameover= new GameOver();
             myWorld.addObject(gameover, 400,250);
-            Greenfoot.playSound("botc.wav");
+            Greenfoot.playSound("gameover.wav");
             myWorld.removeObject(this);
             
             //Greenfoot.stop();

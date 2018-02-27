@@ -16,7 +16,7 @@ public class Pinkbean extends Actor
     {
         
         GreenfootImage myImage = getImage();
-        myImage.scale(225,150);// Add your action code here.
+        myImage.scale(148,147);// Add your action code here.
         
         setLocation(getX(),getY()+1);
     }    

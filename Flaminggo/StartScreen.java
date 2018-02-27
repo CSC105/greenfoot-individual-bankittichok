@@ -21,7 +21,7 @@ public class StartScreen extends World
 
         FlamingGo flam = new FlamingGo();
 
-        addObject(flam, 200, 200);
+        addObject(flam, 200, 180);
 
         Start st = new Start();
         addObject(st, 650, 250);
@@ -39,15 +39,18 @@ public class StartScreen extends World
     public void act(){
 
         myMusic.setVolume(60);
-        //start playing sound;
+        myMusic.playLoop();
+        
 
         if(Greenfoot.isKeyDown("enter")){
+            Greenfoot.playSound("game start.wav");
             Greenfoot.setWorld(new Runningworld());
             StartScreen.myMusic.stop();
         }
 
         if (Greenfoot.mouseClicked(this))
         {
+            Greenfoot.playSound("game start.wav");
             Greenfoot.setWorld(new StartScreen());
             StartScreen.myMusic.stop();
         }

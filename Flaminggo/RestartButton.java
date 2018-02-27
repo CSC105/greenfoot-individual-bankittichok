@@ -18,7 +18,9 @@ public class RestartButton extends Actor
     {
         if(Greenfoot.mouseClicked(this)){
         Greenfoot.setWorld(new Runningworld());
+        Runningworld.myMusic.stop();
         Greenfoot.playSound("Kinesis Extended.mp3");
+        
         // Add your action code here.
         }
         //if(Greenfoot.myMusicisPlaying)

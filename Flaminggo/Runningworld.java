@@ -16,7 +16,7 @@ public class Runningworld extends World
      */
     public Runningworld()
     {    
-        
+        //myWorld =
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(956, 551, 1,false);
 
@@ -52,8 +52,9 @@ public class Runningworld extends World
         
         myMusic.play();
         myMusic.setVolume(0);
-        
+        myMusic.playLoop();
 }
+   boolean rewardAdded = false;
     public void act(){
         myMusic.setVolume(40);
         if(Greenfoot.getRandomNumber(5000)<10){
@@ -69,11 +70,26 @@ public class Runningworld extends World
         if(Greenfoot.getRandomNumber(4000)<10){
             addObject(new Booster(),Greenfoot.getRandomNumber(956),0);
         }
-        if(Score.score == 1000000){
+        if(Score.score >= 100 && rewardAdded == false){
+            Tier tie = new Tier();
+            
+            addObject(tie, 473,250);
+            
+            rewardAdded = true;
+            
+        }
+   
+        if(Score.score >= 100000000 && rewardAdded == true){
             Reward rev = new Reward();
             
             addObject(rev, 473,250);
             
+            rewardAdded = false;
+            
         }
    }
+   //public void showText(){
+    //myWorld.showText("THANKS FOR PLAYING",500,525);
+    //}
+//}
 }

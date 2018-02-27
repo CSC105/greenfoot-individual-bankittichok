@@ -15,7 +15,7 @@ public class FlamingGo extends Actor
     {
         for(int i=0 ; i<36 ; i++){
             rightImage[i] = new GreenfootImage("Flamingo/Flamingo"+(i+1)+".png");
-            rightImage[i].scale(200,240);
+            rightImage[i].scale(175,285);
         }
     }
     /**
@@ -24,13 +24,22 @@ public class FlamingGo extends Actor
      */
     public void act() 
     {
+        
         if(j == 36) j = 0;
         j++;
         setImage(rightImage[j-1]);
-    
+        
+        sing();
     } 
     public void animation()
     {
       int health =1;
     }
+    
+    public void sing() 
+    {
+        if(Greenfoot.mouseClicked(this)){
+        Greenfoot.playSound("bird.mp3");
+    }
+}
 }

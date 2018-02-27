@@ -19,8 +19,9 @@ public class Tutorial extends Actor
     }
     
     public void act() 
-    {
+    { 
        if(Greenfoot.mouseClicked(this)){
+        Greenfoot.playSound("woodcrack.wav");
         World myWorld = getWorld();
         Tutorialtwo two = new Tutorialtwo();
         myWorld.addObject(two, 500,300);

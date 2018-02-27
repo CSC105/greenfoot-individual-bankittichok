@@ -13,7 +13,7 @@ public class Maple extends Actor
         GreenfootImage myImage = getImage();
         int myNewHeight = myImage.getHeight()/2;
         int myNewWidth = (int)myImage.getWidth()/2;
-        myImage.scale(142, 142);
+        myImage.scale(135, 150);
     }
     /**
      * Act - do whatever the Maple wants to do. This method is called whenever

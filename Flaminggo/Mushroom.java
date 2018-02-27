@@ -16,7 +16,7 @@
             public void act() 
             {
                   GreenfootImage myImage = getImage();
-                myImage.scale(100,100);// Add your action code here.
+                myImage.scale(100,95);// Add your action code here.
                 
                 setLocation(getX(),getY()+6);
                
