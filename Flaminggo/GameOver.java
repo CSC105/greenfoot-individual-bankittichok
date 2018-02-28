@@ -20,6 +20,5 @@ public class GameOver extends Actor
     public void act() 
     {
         Runningworld.myMusic.stop();
-        // Add your action code here.
     }    
 }

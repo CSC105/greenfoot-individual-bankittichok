@@ -20,13 +20,14 @@ public class StartScreen extends World
         super(956, 551, 1);
 
         FlamingGo flam = new FlamingGo();
-
         addObject(flam, 200, 180);
 
         Start st = new Start();
         addObject(st, 650, 250);
+        
         Maple ma = new Maple();
         addObject(ma, 800, 75);
+        
         Tutorial tuto = new Tutorial();
         addObject(tuto, 130 , 400);
         

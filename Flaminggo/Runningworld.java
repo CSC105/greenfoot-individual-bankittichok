@@ -78,81 +78,92 @@ public class Runningworld extends World
             addObject(new Toad(),Greenfoot.getRandomNumber(956),0);
         }
         
-        if(Score.score >= 10 && Score.score <=30 && rewardAdded ==false){
+        if(Score.score  >= -10 && Score.score <=0 && rewardAdded ==false){
+
+            Tier0 ti = new Tier0();
+
+            addObject(ti, 473,250);
+
+            rewardAdded = true;
+            
+            Greenfoot.playSound("reward.wav");
+        }
+
+        if(Score.score >= 10 && Score.score <=30 && rewardAdded ==true){
 
             Tier tie = new Tier();
 
             addObject(tie, 473,250);
 
-            rewardAdded = true;
+            rewardAdded = false;
             
             Greenfoot.playSound("reward.wav");
         }
 
-        if(Score.score >= 40 && Score.score <=70 && rewardAdded ==true){
+        if(Score.score >= 40 && Score.score <=70 && rewardAdded ==false){
 
             Tier2 tierr = new Tier2();
 
             addObject(tierr, 473,250);
 
-            rewardAdded = false;
+            rewardAdded = true;
             
             Greenfoot.playSound("reward.wav");
         }
 
-        if(Score.score >= 100 && Score.score <=130 && rewardAdded ==false){
+        if(Score.score >= 100 && Score.score <=130 && rewardAdded ==true){
 
             Tier3 tierrr = new Tier3();
 
             addObject(tierrr, 473,250);
 
-            rewardAdded = true;
+            rewardAdded = false;
 
         }
 
-        if(Score.score >= 160 && Score.score <=200 && rewardAdded ==true){
+        if(Score.score >= 160 && Score.score <=200 && rewardAdded ==false){
 
             Tier4 tierz = new Tier4();
 
             addObject(tierz, 473,250);
 
-            rewardAdded = false;
+            rewardAdded = true;
             
             Greenfoot.playSound("reward.wav");
             
         }
 
-        if(Score.score >= 250 && Score.score <=300 && rewardAdded ==false){
+        if(Score.score >= 250 && Score.score <=300 && rewardAdded ==true){
 
             Tier5 tiezz = new Tier5();
 
             addObject(tiezz, 473,250);
 
-            rewardAdded = true;
+            rewardAdded = false;
             
             Greenfoot.playSound("reward.wav");
             
            
         }
 
-        if(Score.score >= 400 && Score.score <=550 && rewardAdded ==true){
+        if(Score.score >= 400 && Score.score <=550 && rewardAdded ==false){
 
             Tier6 tierz = new Tier6();
 
             addObject(tierz, 473,250);
 
-            rewardAdded = false;
+            rewardAdded = true;
             
             Greenfoot.playSound("reward.wav");
             
         }
 
-        if(Score.score >= 700 && rewardAdded == false ){
+        if(Score.score >= 700 && rewardAdded == true ){
             Reward rev = new Reward();
 
             addObject(rev, 473,250);
 
-            rewardAdded = true;
+            rewardAdded = false;
             
             Greenfoot.playSound("reward.wav");
         

@@ -77,7 +77,7 @@ public class Flamin extends Actor
             Greenfoot.playSound("gameover.wav");
             myWorld.removeObject(this);
            
-            //Greenfoot.stop();
+            
             StartScreen.myMusic.stop();
             Runningworld.myMusic.stop();
         }
