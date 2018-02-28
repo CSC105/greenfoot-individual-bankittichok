@@ -20,7 +20,7 @@ public class Reward extends Actor
      */
     public void act() 
     {
-        getImage().setTransparency(200);
+        getImage().setTransparency(120);
         setLocation(getX(),getY());
         // Add your action code here.
     }    

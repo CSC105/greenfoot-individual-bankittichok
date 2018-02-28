@@ -41,7 +41,7 @@ public class FlamingGo extends Actor
     public void sing() 
     {
         if(Greenfoot.mouseClicked(this)){
-            Greenfoot.playSound("bird.mp3");
+            Greenfoot.playSound("bird.wav");
         }
     }
 }

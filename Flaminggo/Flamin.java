@@ -64,6 +64,7 @@ public class Flamin extends Actor
         //else{myImage[img].mirrorHorizontally());}
         gain();
         death();
+        sing();
     }
 
     public void death()
@@ -80,7 +81,21 @@ public class Flamin extends Actor
             StartScreen.myMusic.stop();
             Runningworld.myMusic.stop();
         }
+    
+        Actor Toad= getOneObjectAtOffset(0,0,Toad.class);
+        if(Toad !=null){
+            World myWorld = getWorld();
+            GameOver gameover= new GameOver();
+            myWorld.addObject(gameover, 400,250);
+            Greenfoot.playSound("gameover.wav");
+            myWorld.removeObject(this);
+
+            //Greenfoot.stop();
+            StartScreen.myMusic.stop();
+            Runningworld.myMusic.stop();
+        }
     }
+    
 
     public void gain()
     {
@@ -107,6 +122,7 @@ public class Flamin extends Actor
         if(Booster !=null){
             World Runningworld;
             World Myworld = getWorld();
+
             Greenfoot.playSound("cir.wav");
             if(Greenfoot.isKeyDown("Left")){
                 setLocation(getX()-100,getY());
@@ -116,7 +132,7 @@ public class Flamin extends Actor
             } 
             Myworld.removeObject(Booster);
 
-            Score.score--;
+            Score.score-=3;
         }
 
     }
@@ -144,12 +160,16 @@ public class Flamin extends Actor
 
     public void checkWalk(){
         if(atLeftWorldEdge()==true){
-            setLocation(getX()+4,getY());
+            setLocation(getX()+5,getY());
         }
         if(atRightEdge()==true){
-            setLocation(getX()-4,getY());
+            setLocation(getX()-5,getY());
+        }
+    }
+
+    public void sing(){
+        if(Greenfoot.isKeyDown("z")){
+            Greenfoot.playSound("beatboxz.wav");
         }
     }
 }
-
-    

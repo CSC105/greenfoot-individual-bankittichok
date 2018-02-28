@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class StartScreen extends World
 {
-    public static GreenfootSound myMusic = new GreenfootSound("Theme.mp3");
+    public static GreenfootSound myMusic = new GreenfootSound("mapletheme.wav");
 
     /**
      * Constructor for objects of class StartScreen.
@@ -34,14 +34,18 @@ public class StartScreen extends World
         addObject(sou, 920,40);
         myMusic.play();
         myMusic.setVolume(0);
+        
     }
-
+    
+    
+    
     public void act(){
 
         myMusic.setVolume(60);
         myMusic.playLoop();
 
-        if(Greenfoot.isKeyDown("enter")){
+        if(Greenfoot.isKeyDown("enter"))
+        {
             Greenfoot.playSound("game start.wav");
             Greenfoot.setWorld(new Runningworld());
             StartScreen.myMusic.stop();

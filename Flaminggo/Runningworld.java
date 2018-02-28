@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Runningworld extends World
 {
-    public static GreenfootSound myMusic = new GreenfootSound("Kinesis Extended.mp3");
+    public static GreenfootSound myMusic = new GreenfootSound("mpthemetot.wav");
 
     /**
      * Constructor for objects of class Runningworld.
@@ -19,6 +19,7 @@ public class Runningworld extends World
         //myWorld =
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(956, 551, 1,false);
+        count = 0;
 
         Flamin flami = new Flamin();
 
@@ -52,10 +53,12 @@ public class Runningworld extends World
         myMusic.play();
         myMusic.setVolume(0);
         myMusic.playLoop();
+
     }
     boolean rewardAdded = false;
+    private int count;
     public void act(){
-        myMusic.setVolume(40);
+        myMusic.setVolume(100);
         if(Greenfoot.getRandomNumber(5000)<10){
             addObject(new Pinkbean(),Greenfoot.getRandomNumber(956),0);
         }
@@ -69,26 +72,94 @@ public class Runningworld extends World
         if(Greenfoot.getRandomNumber(4000)<10){
             addObject(new Booster(),Greenfoot.getRandomNumber(956),0);
         }
-        if(Score.score >= 100 && rewardAdded == false){
+
+        if(Score.score >= 10 && Score.score <=30 && rewardAdded ==false){
+
             Tier tie = new Tier();
 
             addObject(tie, 473,250);
 
             rewardAdded = true;
+            
+            Greenfoot.playSound("reward.wav");
+        }
+
+        if(Score.score >= 40 && Score.score <=70 && rewardAdded ==true){
+
+            Tier2 tierr = new Tier2();
+
+            addObject(tierr, 473,250);
+
+            rewardAdded = false;
+            
+            Greenfoot.playSound("reward.wav");
+        }
+
+        if(Score.score >= 100 && Score.score <=130 && rewardAdded ==false){
+
+            Tier3 tierrr = new Tier3();
+
+            addObject(tierrr, 473,250);
+
+            rewardAdded = true;
 
         }
 
-        if(Score.score >= 100000000 && rewardAdded == true){
+        if(Score.score >= 160 && Score.score <=200 && rewardAdded ==true){
+
+            Tier4 tierz = new Tier4();
+
+            addObject(tierz, 473,250);
+
+            rewardAdded = false;
+            
+            Greenfoot.playSound("reward.wav");
+            if(Greenfoot.getRandomNumber(5000)<10){
+            addObject(new Toad(),Greenfoot.getRandomNumber(956),0);
+        }
+        }
+
+        if(Score.score >= 250 && Score.score <=300 && rewardAdded ==false){
+
+            Tier5 tiezz = new Tier5();
+
+            addObject(tiezz, 473,250);
+
+            rewardAdded = true;
+            
+            Greenfoot.playSound("reward.wav");
+            
+             if(Greenfoot.getRandomNumber(4000)<10){
+            addObject(new Toad(),Greenfoot.getRandomNumber(956),0);
+        }
+        }
+
+        if(Score.score >= 400 && Score.score <=550 && rewardAdded ==true){
+
+            Tier6 tierz = new Tier6();
+
+            addObject(tierz, 473,250);
+
+            rewardAdded = false;
+            
+            Greenfoot.playSound("reward.wav");
+             if(Greenfoot.getRandomNumber(3000)<10){
+            addObject(new Toad(),Greenfoot.getRandomNumber(956),0);
+        }
+        }
+
+        if(Score.score >= 700 && rewardAdded == false ){
             Reward rev = new Reward();
 
             addObject(rev, 473,250);
 
-            rewardAdded = false;
-
+            rewardAdded = true;
+            
+            Greenfoot.playSound("reward.wav");
+             if(Greenfoot.getRandomNumber(3000)<10){
+            addObject(new Toad(),Greenfoot.getRandomNumber(956),0);
         }
+        }
+
     }
-    //public void showText(){
-    //myWorld.showText("THANKS FOR PLAYING",500,525);
-    //}
-    //}
 }

@@ -22,16 +22,11 @@ public class Tier extends Actor
 
     public void act() 
     {
-
-        /*  if(Score.score >=15 && rewardAdded ==true){
-
-        World Runningworld;
-        World Myworld = getWorld();
-        Score.score+=5;
-        Greenfoot.playSound("ting.wav");
-        Myworld.removeObject(Tier);
-        rewardAdded = false;// Add your action code here.
-        }    */
-        getImage().setTransparency(100);
+        if(Score.score >=35){
+            World Runningworld;
+            World Myworld = getWorld();
+            Myworld.removeObject(this);
+        }
+        getImage().setTransparency(120);
     }
 }

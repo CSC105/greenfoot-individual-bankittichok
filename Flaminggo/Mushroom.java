@@ -20,7 +20,7 @@ public class Mushroom extends Actor
 
         setLocation(getX(),getY()+6);
 
-        gain();
+        //gain();
     }    
 
     public void gain()
