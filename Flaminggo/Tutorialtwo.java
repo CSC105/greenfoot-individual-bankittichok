@@ -12,7 +12,7 @@ public class Tutorialtwo extends Actor
     public Tutorialtwo()
     {
         GreenfootImage myImage = getImage();
-        myImage.scale(600,400);
+        myImage.scale(800,400);
     }
 
     /**
@@ -29,6 +29,6 @@ public class Tutorialtwo extends Actor
         if (Greenfoot.isKeyDown("space")){
             Greenfoot.playSound("blip.wav");
             getWorld().removeObject(this);
-        }    
+        }
     }
 }

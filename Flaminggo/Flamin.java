@@ -69,14 +69,14 @@ public class Flamin extends Actor
 
     public void death()
     {
-        Actor Slime= getOneObjectAtOffset(0,25,Slime.class);
+        Actor Slime= getOneObjectAtOffset(0,0,Slime.class);
         if(Slime !=null){
             World myWorld = getWorld();
             GameOver gameover= new GameOver();
             myWorld.addObject(gameover, 400,250);
             Greenfoot.playSound("gameover.wav");
             myWorld.removeObject(this);
-
+           
             //Greenfoot.stop();
             StartScreen.myMusic.stop();
             Runningworld.myMusic.stop();
@@ -89,8 +89,6 @@ public class Flamin extends Actor
             myWorld.addObject(gameover, 400,250);
             Greenfoot.playSound("gameover.wav");
             myWorld.removeObject(this);
-
-            //Greenfoot.stop();
             StartScreen.myMusic.stop();
             Runningworld.myMusic.stop();
         }

@@ -54,6 +54,8 @@ public class Runningworld extends World
         myMusic.setVolume(0);
         myMusic.playLoop();
 
+        setPaintOrder(Flamin.class);
+        
     }
     boolean rewardAdded = false;
     private int count;
@@ -72,7 +74,10 @@ public class Runningworld extends World
         if(Greenfoot.getRandomNumber(4000)<10){
             addObject(new Booster(),Greenfoot.getRandomNumber(956),0);
         }
-
+         if(Greenfoot.getRandomNumber(7000)<10){
+            addObject(new Toad(),Greenfoot.getRandomNumber(956),0);
+        }
+        
         if(Score.score >= 10 && Score.score <=30 && rewardAdded ==false){
 
             Tier tie = new Tier();
@@ -114,9 +119,7 @@ public class Runningworld extends World
             rewardAdded = false;
             
             Greenfoot.playSound("reward.wav");
-            if(Greenfoot.getRandomNumber(5000)<10){
-            addObject(new Toad(),Greenfoot.getRandomNumber(956),0);
-        }
+            
         }
 
         if(Score.score >= 250 && Score.score <=300 && rewardAdded ==false){
@@ -129,9 +132,7 @@ public class Runningworld extends World
             
             Greenfoot.playSound("reward.wav");
             
-             if(Greenfoot.getRandomNumber(4000)<10){
-            addObject(new Toad(),Greenfoot.getRandomNumber(956),0);
-        }
+           
         }
 
         if(Score.score >= 400 && Score.score <=550 && rewardAdded ==true){
@@ -143,9 +144,7 @@ public class Runningworld extends World
             rewardAdded = false;
             
             Greenfoot.playSound("reward.wav");
-             if(Greenfoot.getRandomNumber(3000)<10){
-            addObject(new Toad(),Greenfoot.getRandomNumber(956),0);
-        }
+            
         }
 
         if(Score.score >= 700 && rewardAdded == false ){
@@ -156,10 +155,8 @@ public class Runningworld extends World
             rewardAdded = true;
             
             Greenfoot.playSound("reward.wav");
-             if(Greenfoot.getRandomNumber(3000)<10){
-            addObject(new Toad(),Greenfoot.getRandomNumber(956),0);
+        
         }
-        }
-
+        
     }
 }

@@ -29,11 +29,15 @@ public class StartScreen extends World
         addObject(ma, 800, 75);
         Tutorial tuto = new Tutorial();
         addObject(tuto, 130 , 400);
+        
+        Enemy enm = new Enemy();
+        addObject (enm, 100,80);
 
         SoundButton sou = new SoundButton();
         addObject(sou, 920,40);
         myMusic.play();
         myMusic.setVolume(0);
+        
         
     }
     
