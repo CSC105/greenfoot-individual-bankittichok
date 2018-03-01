@@ -23,7 +23,7 @@ public class SoundButton extends Actor
 
     public void act() 
     {
-        if(x==0){
+            if(x==0){
             if(Greenfoot.mouseClicked(this)){
                 x=1;
                 StartScreen.myMusic.stop();
@@ -37,6 +37,6 @@ public class SoundButton extends Actor
                 StartScreen.myMusic.play();
                 Runningworld.myMusic.play();
             }
-        }
     } 
+}
 }

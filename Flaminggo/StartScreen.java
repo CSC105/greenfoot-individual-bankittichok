@@ -47,7 +47,6 @@ public class StartScreen extends World
     public void act(){
 
         myMusic.setVolume(60);
-        myMusic.playLoop();
 
         if(Greenfoot.isKeyDown("enter"))
         {
