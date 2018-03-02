@@ -19,7 +19,7 @@ public class Runningworld extends World
         //myWorld =
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(956, 551, 1,false);
-        count = 0;
+       
 
         Flamin flami = new Flamin();
 
@@ -54,7 +54,7 @@ public class Runningworld extends World
         myMusic.setVolume(0);
         myMusic.playLoop();
 
-        setPaintOrder(Flamin.class);
+        setPaintOrder(Flamin.class,GameOver.class);
         
     }
     boolean rewardAdded = false;

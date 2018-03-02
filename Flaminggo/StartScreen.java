@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class StartScreen extends World
 {
     public static GreenfootSound myMusic = new GreenfootSound("mapletheme.wav");
-
+    
     /**
      * Constructor for objects of class StartScreen.
      * 
@@ -33,6 +33,9 @@ public class StartScreen extends World
         
         Enemy enm = new Enemy();
         addObject (enm, 100,80);
+        
+        Credit cre = new Credit();
+        addObject(cre, 700,530);
 
         SoundButton sou = new SoundButton();
         addObject(sou, 920,40);
